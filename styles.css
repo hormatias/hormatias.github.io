@@ -177,22 +177,178 @@ button:hover {
 }
 
 @media print {
-  .Page > * {
-    border: none;
+  :root {
+    --print-primary: #2c3e50;
+    --print-secondary: #34495e;
+    --print-accent: #3498db;
+    --print-text: #2d2d2d;
+    --print-muted: #7f8c8d;
+    --print-border: #bdc3c7;
   }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--print-text);
+    line-height: 1.2;
+  }
+
   .Page {
-    display: block;
-  }
-  .Page h3 {
+    display: flex !important;
+    flex-direction: column !important;
+    max-width: 100%;
     margin: 0;
+    padding: 0;
   }
-  .Page a {
-    color: var(--text-color);
+
+  .Page > * {
+    flex: none !important;
+    border: none;
+    padding: 0.1em 0.8em;
+    background: none !important;
+    width: auto !important;
+  }
+
+  .header {
+    padding: 0.4em 2em !important;
+    margin-bottom: 0.3em !important;
+    border-bottom: none !important;
+  }
+
+  .header h2 {
+    font-size: 1.5em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--print-primary) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+  }
+
+  .header h3 {
+    font-size: 0.9em !important;
+    margin: 0.1em 0 0 0 !important;
+    padding: 0 !important;
+    color: var(--print-secondary) !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .Page article {
+    margin: 0.2em 0;
+    padding: 0 2em;
+    border-bottom: none;
+  }
+
+  .Page article em {
+    font-size: 0.75em;
+    line-height: 1.3;
+    margin: 0.2em auto;
+    color: var(--print-secondary);
+    display: block;
+    max-width: 90%;
+  }
+
+  .Page h3 {
+    font-size: 0.85em;
+    margin: 0.6em 0 0.2em;
+    padding: 0 0 0.1em 0;
+    color: var(--print-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    border-bottom: 1px solid var(--print-border);
+    width: 100%;
+  }
+
+  .Page main {
+    padding: 0 2em;
+    margin-bottom: 0.4em;
+  }
+
+  .Page dl {
+    margin: 0;
+    padding: 0 0 0 1em;
+  }
+
+  .Page dt {
+    margin: 0.2em 0 0;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--print-primary);
+  }
+
+  .Page dt small {
+    margin-left: 0.3em;
+    font-size: 0.9em;
+    color: var(--print-muted);
+    font-weight: normal;
+  }
+
+  .Page dd {
+    margin: 0 0 0.2em 0.6em;
+    font-size: 0.75em;
+    line-height: 1.2;
+    color: var(--print-secondary);
+  }
+
+  .Page aside {
+    padding: 0 2em;
+    margin-top: 0.4em;
+    border-top: none;
+  }
+
+  .Page aside.skills {
+    margin-top: 0.4em;
+  }
+
+  .Page aside.contact {
+    margin-top: 0.4em;
+  }
+
+  .Page aside ul {
+    margin: 0.2em 0;
+    padding: 0 0 0 1em;
+    list-style: none;
+  }
+
+  .Page aside.skills ul {
+    padding-left: 0;
+  }
+
+  .Page aside.skills li {
+    background: var(--print-border);
+    padding: 0.2em 0.5em;
+    border-radius: 3px;
+    color: var(--print-primary);
+    margin: 0.1em 0.3em 0.1em 0;
+  }
+
+  .Page aside.contact ul {
+    padding-left: 1em;
+  }
+
+  .Page aside.contact li {
+    display: block;
+    margin-bottom: 0.3em;
+    position: relative;
+  }
+
+  .Page aside.contact a {
+    color: var(--print-accent);
     text-decoration: none;
+  }
+
+  @page {
+    margin: 1.5cm 2cm;
+    size: A4;
   }
 
   .no-print, .no-print * {
     display: none !important;
+  }
+
+  .Page > *:hover {
+    background-color: transparent;
   }
 }
 
