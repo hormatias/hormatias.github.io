@@ -5,130 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Matias Hormaza - Fron-End Developer</title>
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    code {
-      font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
-    }
-    .Page {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      margin: 0;
-      width: 100vw;
-    }
-    .Page > * {
-      flex-grow: 1;
-      border-top: 1px solid gray;
-      border-right: 1px solid gray;
-      border-bottom: 1px solid lightgray;
-      border-left: 1px solid lightgray;
-      padding: .5em;
-      display: inline;
-    }
-  
-    h3 {
-      margin: 0;
-    }
-    
-    header h3 {
-      margin: 2em;
-    }
-    .Page a {
-      color: grey
-    }
-    .Page ul, dl {
-      margin: 0
-    }
-    .Page article {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    button {
-      background-color: black;
-      color: white;
-      width: 100%;
-      border: none;
-      height: 30px;
-      position: fixed;
-      bottom: 0;
-    }
-    .header {
-      text-align: center;
-      font-size: calc(10px + 2vmin);
-      color: white;
-      border: none;
-      text-shadow: 1px 1px 1px black;
-      background-color: #282c34;
-      background-position: 0px 0px;
-      background-size: cover;
-      background-image: url(./background.jpeg);
-    }
-    @media all and (max-width: 768px) {
-      h2 {
-        font-size: 1.2em;
-      }
-      h3 {
-        font-size: .9em;
-      }
-    }
-    @media all and (min-width: 768px) {
-      .Page {
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: unset;
-      	height: Calc(100vh - 30px);
-        min-height: fit-content;
-      }
-      .Page article {
-        width: 100%;
-      }
-      .Page aside {
-        flex: 1 0 0;
-      }
-      .Page aside.skills {
-        order: 1;
-      }
-      .Page aside.contact {
-        order: 3;
-      }
-      .Page main {
-        flex: 3 0 0;
-        order: 2;
-      }
-      .Page button {
-        order: 4;
-      }
-    }
-    @media print {
-      .Page > * {
-        border: none;
-      }
-      .Page {
-        display: block;
-      }
-      .Page h3 {
-        margin: 0;
-      }
-  
-      .no-print, .no-print * {
-        display: none !important;
-      }
-    }
-  </style>
-
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -218,13 +95,11 @@
       </ul>
     </aside>
     <button onclick="javascript:window.print()" class="no-print"> Print </button>
+    <button onclick="switchLanguage()" class="no-print language-switch">ES</button>
   </div>
   <div style='height: 30px;'></div>
 
-  <script>
-  
-  </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>

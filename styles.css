@@ -1,0 +1,223 @@
+:root {
+  --primary-color: #282c34;
+  --secondary-color: #61dafb;
+  --text-color: #333;
+  --light-gray: #f5f5f5;
+  --border-color: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  background-color: var(--light-gray);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.Page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.Page > * {
+  flex-grow: 1;
+  border: 1px solid var(--border-color);
+  padding: 1.5em;
+  display: inline;
+  transition: all 0.3s ease;
+}
+
+.Page > *:hover {
+  background-color: var(--light-gray);
+}
+
+h2, h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+header h3 {
+  margin: 1em 0;
+  color: white;
+}
+
+.Page a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Page a:hover {
+  color: var(--primary-color);
+}
+
+.Page ul, dl {
+  margin: 0;
+  padding-left: 1em;
+}
+
+.Page article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+.Page article em {
+  font-style: normal;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+  border: none;
+  position: fixed;
+  bottom: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.header {
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border: none;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  background-color: var(--primary-color);
+  background-position: center;
+  background-size: cover;
+  background-image: url(./background.jpeg);
+  padding: 2em 1em;
+}
+
+.header h2, .header h3 {
+  color: white;
+  margin: 0.5em 0;
+}
+
+@media all and (max-width: 768px) {
+  h2 {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+  .Page > * {
+    padding: 1em;
+  }
+  .Page article {
+    padding: 2em 1em;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .Page {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: unset;
+    height: Calc(100vh - 40px);
+    min-height: fit-content;
+  }
+  .Page article {
+    width: 100%;
+  }
+  .Page aside {
+    flex: 1 0 0;
+  }
+  .Page aside.skills {
+    order: 1;
+  }
+  .Page aside.contact {
+    order: 3;
+  }
+  .Page main {
+    flex: 3 0 0;
+    order: 2;
+  }
+  .Page button {
+    order: 4;
+  }
+}
+
+@media print {
+  .Page > * {
+    border: none;
+  }
+  .Page {
+    display: block;
+  }
+  .Page h3 {
+    margin: 0;
+  }
+  .Page a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .no-print, .no-print * {
+    display: none !important;
+  }
+}
+
+.language-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.language-switch:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+@media print {
+  .language-switch {
+    display: none;
+  }
+} 
