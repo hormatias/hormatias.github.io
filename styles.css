@@ -34,6 +34,12 @@ code {
   margin: 0;
   width: 100vw;
   min-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.Page.loaded {
+  opacity: 1;
 }
 
 .Page > * {
@@ -130,6 +136,7 @@ button:hover {
 .header h2, .header h3 {
   color: white;
   margin: 0.5em 0;
+  text-transform: uppercase;
 }
 
 @media all and (max-width: 768px) {
@@ -221,6 +228,7 @@ button:hover {
     color: var(--print-primary) !important;
     font-weight: 700 !important;
     letter-spacing: -0.02em;
+    text-transform: uppercase;
   }
 
   .header h3 {

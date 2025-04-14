@@ -1,9 +1,9 @@
 const translations = {
   en: {
-    title: "Matias Hormaza - Front-End Developer",
+    title: "Matias Hormaza - Fullstack Web Developer",
     header: {
       name: "Matias Lionel Hormaza Becerra",
-      title: "Front-End Developer"
+      title: "Fullstack Web Developer"
     },
     bio: "Software developer passionate about technology and new ways to connect people. Exploring Blockchain and decentralized systems as tools for the future. Curious about Emerging Technologies and how they can create new ways to connect people. Learning Python and IoT to drive automation in various fields. Multilingual, speaking several languages to expand my reach and connect with diverse communities.",
     experience: {
@@ -69,10 +69,10 @@ const translations = {
     }
   },
   es: {
-    title: "Matias Hormaza - Desarrollador Front-End",
+    title: "Matias Hormaza - Desarrollador Web Fullstack",
     header: {
       name: "Matias Lionel Hormaza Becerra",
-      title: "Desarrollador Front-End"
+      title: "Desarrollador Web Fullstack"
     },
     bio: "Desarrollador de software apasionado por la tecnología y las nuevas formas de conectar a las personas. Explorando Blockchain y sistemas descentralizados como herramientas del futuro. Curioso sobre Tecnologías Emergentes y cómo pueden crear nuevas formas de conectar a las personas. Aprendiendo Python e IoT para impulsar la automatización en diversos campos. Multilingüe, hablo varios idiomas para ampliar mi alcance y conectar con comunidades diversas.",
     experience: {
@@ -191,6 +191,9 @@ function updateContent() {
 
   // Update HTML lang attribute
   document.documentElement.lang = currentLanguage;
+
+  // Show content after translations are loaded
+  document.querySelector('.Page').classList.add('loaded');
 }
 
 function switchLanguage() {
@@ -201,5 +204,7 @@ function switchLanguage() {
 }
 
 // Initialize the page with saved or detected language
-currentLanguage = getInitialLanguage();
-updateContent(); 
+document.addEventListener('DOMContentLoaded', () => {
+  currentLanguage = getInitialLanguage();
+  updateContent();
+}); 
