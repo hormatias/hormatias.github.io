@@ -141,6 +141,18 @@ const translations = {
 
 let currentLanguage = 'en';
 
+// Detect browser language
+function detectLanguage() {
+  const browserLang = navigator.language || navigator.userLanguage;
+  return browserLang.startsWith('es') ? 'es' : 'en';
+}
+
+// Get saved language preference or detect browser language
+function getInitialLanguage() {
+  const savedLanguage = localStorage.getItem('preferredLanguage');
+  return savedLanguage || detectLanguage();
+}
+
 function updateContent() {
   const lang = translations[currentLanguage];
   if (!lang) return;
@@ -183,8 +195,11 @@ function updateContent() {
 
 function switchLanguage() {
   currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+  // Save language preference
+  localStorage.setItem('preferredLanguage', currentLanguage);
   updateContent();
 }
 
-// Initialize the page
+// Initialize the page with saved or detected language
+currentLanguage = getInitialLanguage();
 updateContent(); 
