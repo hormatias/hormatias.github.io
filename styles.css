@@ -141,7 +141,7 @@ button:hover {
 
 @media all and (max-width: 768px) {
   h2 {
-    font-size: 1.4em;
+    font-size: 2em;
   }
   h3 {
     font-size: 1.1em;
