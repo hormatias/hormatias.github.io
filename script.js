@@ -155,18 +155,25 @@ function getInitialLanguage() {
 
 function updateContent() {
   const lang = translations[currentLanguage];
-  if (!lang) return;
+  
+  // Helper function to safely update element content
+  function safeUpdateElement(id, content) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.textContent = content;
+    }
+  }
 
   // Update static content
-  document.getElementById('page-title').textContent = lang.title;
-  document.getElementById('header-name').textContent = lang.header.name;
-  document.getElementById('header-title').textContent = lang.header.title;
-  document.getElementById('bio').textContent = lang.bio;
-  document.getElementById('experience-title').textContent = lang.experience.title;
-  document.getElementById('skills-title').textContent = lang.skills.title;
-  document.getElementById('contact-title').textContent = lang.contact.title;
-  document.getElementById('print-button').textContent = lang.buttons.print;
-  document.getElementById('language-button').textContent = lang.buttons.language;
+  safeUpdateElement('page-title', lang.title);
+  safeUpdateElement('header-name', lang.header.name);
+  safeUpdateElement('header-title', lang.header.title);
+  safeUpdateElement('bio', lang.bio);
+  safeUpdateElement('experience-title', lang.experience.title);
+  safeUpdateElement('skills-title', lang.skills.title);
+  safeUpdateElement('contact-title', lang.contact.title);
+  safeUpdateElement('print-button', lang.buttons.print);
+  safeUpdateElement('language-button', lang.buttons.language);
 
   // Update experience list
   const experienceList = document.getElementById('experience-list');
