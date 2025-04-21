@@ -1,6 +1,6 @@
 # Matias Hormaza - Personal Website
 
-This is my personal website/portfolio built with vanilla HTML, CSS, and JavaScript. It features a clean, responsive design and bilingual support (English/Spanish).
+This is my personal website/portfolio built with HTML, CSS, and JavaScript. It features a clean, responsive design and bilingual support (English/Spanish).
 
 ## Features
 
