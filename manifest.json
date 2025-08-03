@@ -1,0 +1,25 @@
+{
+    "name": "Matias Hormaza - Web Developer",
+    "short_name": "Matias Hormaza",
+    "description": "Desarrollador Web Full Stack especializado en crear experiencias digitales únicas con tecnología moderna",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0068",
+    "theme_color": "#af00ce",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["business", "productivity", "utilities"],
+    "lang": "es-AR",
+    "dir": "ltr"
+} 

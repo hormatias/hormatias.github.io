@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V14LGV63N3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-V14LGV63N3");
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matias Hormaza - Web Developer | Desarrollador Web Full Stack</title>
+    <meta name="description" content="Matias Hormaza - Desarrollador Web Full Stack especializado en crear experiencias digitales únicas con tecnología moderna. Desarrollo web, React, Node.js, y soluciones digitales innovadoras.">
+    <meta name="keywords" content="desarrollador web, web developer, full stack, React, Node.js, JavaScript, desarrollo web, programador, frontend, backend, Argentina">
+    <meta name="author" content="Matias Hormaza">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matias.hormaza.com.ar/">
+    <meta property="og:title" content="Matias Hormaza - Web Developer">
+    <meta property="og:description" content="Desarrollador Web Full Stack especializado en crear experiencias digitales únicas con tecnología moderna.">
+    <meta property="og:image" content="https://matias.hormaza.com.ar/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://matias.hormaza.com.ar/">
+    <meta property="twitter:title" content="Matias Hormaza - Web Developer">
+    <meta property="twitter:description" content="Desarrollador Web Full Stack especializado en crear experiencias digitales únicas con tecnología moderna.">
+    <meta property="twitter:image" content="https://matias.hormaza.com.ar/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://matias.hormaza.com.ar/">
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Matias Hormaza",
+        "jobTitle": "Web Developer",
+        "description": "Desarrollador Web Full Stack especializado en crear experiencias digitales únicas con tecnología moderna",
+        "url": "https://matias.hormaza.com.ar",
+        "sameAs": [
+            "https://www.linkedin.com/in/hormatias/"
+        ],
+        "knowsAbout": [
+            "Web Development",
+            "Full Stack Development",
+            "React",
+            "Node.js",
+            "JavaScript",
+            "Frontend Development",
+            "Backend Development"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AR"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="colors.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 1rem;
+            background: linear-gradient(
+                to bottom,
+                var(--color-primario) 0%,
+                var(--color-secundario) 20%,
+                var(--color-terciario) 40%,
+                var(--color-cuaternario) 50%,
+                var(--color-quinternario) 60%,
+                var(--color-sexternario) 80%,
+                var(--color-primario) 100%
+            );
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Sol vaporwave en el centro */
+        .sun {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(
+                to bottom,
+                var(--color-cuaternario) 0%,
+                var(--color-cuaternario) 30%,
+                var(--color-cuaternario) 70%,
+                var(--color-cuaternario) 100%
+            );
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            box-shadow: 
+                0 0 40px #ffffff,
+                0 0 80px var(--color-cuaternario),
+                0 0 120px var(--color-cuaternario),
+                0 0 160px var(--color-quinternario),
+                0 0 200px var(--color-terciario),
+                inset 0 0 20px #ffffff4d;
+            z-index: 1;
+            animation: vaporwaveSun 4s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        @keyframes vaporwaveSun {
+            0% {
+                box-shadow: 
+                    0 0 40px #ffffff,
+                    0 0 80px var(--color-cuaternario),
+                    0 0 120px var(--color-cuaternario),
+                    0 0 160px var(--color-quinternario),
+                    0 0 200px var(--color-terciario),
+                    inset 0 0 20px #ffffff4d;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            100% {
+                box-shadow: 
+                    0 0 60px #ffffff,
+                    0 0 120px var(--color-cuaternario),
+                    0 0 180px var(--color-cuaternario),
+                    0 0 240px var(--color-quinternario),
+                    0 0 300px var(--color-terciario),
+                    inset 0 0 30px #ffffff80;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+
+        /* Montañas SVG */
+        .mountains-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 2;
+            pointer-events: none;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .mountains-back {
+            position: absolute;
+            bottom: 20px;
+            left: -100px;
+            width: 200%;
+            height: 40vh;
+            background-image: url("montains1.svg");
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+            will-change: transform;
+        }
+
+        .mountains-front {
+            position: absolute;
+            bottom: 0;
+            left: -300px;
+            width: 200%;
+            height: 35vh;
+            background-image: url("montains2.svg");
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+            will-change: transform;
+        }
+
+        /* Roc del Quer SVG */
+        .rocdelquer-container {
+            position: fixed;
+            bottom: -20px;
+            right: -40px;
+            width: 300px;
+            height: 300px;
+            z-index: 4;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        .rocdelquer-container img {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            filter: none;
+        }
+
+        /* Elementos adicionales de Andorra */
+        .andorra-elements {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 4;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        .andorra-bridge {
+            position: absolute;
+            bottom: 0px;
+            right: 30vw;
+            width: 200px;
+            height: 120px;
+        }
+
+        .caldea-spa {
+            position: absolute;
+            bottom: -30px;
+            left: -10px;
+            width: 250px;
+            height: 200px;
+        }
+
+        .church {
+            position: absolute;
+            bottom: -20px;
+            left: 30vw;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 200px;
+        }
+
+        /* Particles.js container */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Edificios */
+        .buildings-container {
+            position: fixed;
+            bottom: -50px;
+            left: -50%;
+            width: 200%;
+            height: 30vh;
+            z-index: 3;
+            pointer-events: none;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .buildings {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("buildings.svg");
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+        }
+
+        /* Sección de contenido principal */
+        .main-content {
+            position: relative;
+            z-index: 10;
+            margin-top: 100vh;
+            border: 2px solid #ffffff;
+            border-radius: 20px;
+            background: linear-gradient(
+                45deg,
+                var(--color-primario) 0%,
+                var(--color-secundario) 15%,
+                var(--color-terciario) 30%,
+                var(--color-cuaternario) 45%,
+                var(--color-quinternario) 60%,
+                var(--color-sexternario) 75%,
+                var(--color-primario) 100%
+            );
+            background-size: 200% 200%;
+            min-height: calc(100vh - 2rem);
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: gradientShift 12s ease-in-out infinite;
+        }
+
+        .content-header {
+            margin-bottom: 2rem;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Fallback para dispositivos que no soportan animaciones complejas */
+        @supports not (animation: gradientShift) {
+            .main-content {
+                background: linear-gradient(
+                    45deg,
+                    var(--color-primario) 0%,
+                    var(--color-secundario) 20%,
+                    var(--color-terciario) 40%,
+                    var(--color-cuaternario) 60%,
+                    var(--color-quinternario) 80%,
+                    var(--color-sexternario) 100%
+                );
+                animation: none;
+            }
+        }
+
+        /* Optimizaciones para dispositivos móviles */
+        @media (max-width: 768px) {
+            .main-content {
+                animation-duration: 16s; /* Más lento en móviles */
+            }
+            
+            .hero-title {
+                animation-duration: 6s; /* Más lento en móviles */
+            }
+        }
+
+        /* Detección específica para iOS */
+        @supports (-webkit-touch-callout: none) {
+            .main-content {
+                animation-duration: 20s; /* Muy lento en iOS */
+            }
+            
+            .hero-title {
+                animation-duration: 8s; /* Muy lento en iOS */
+            }
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 4rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 
+                0 0 10px var(--color-cuaternario),
+                0 0 20px var(--color-cuaternario),
+                0 0 30px var(--color-cuaternario);
+            margin-bottom: 2rem;
+            letter-spacing: 0.2em;
+            animation: glowText 4s ease-in-out infinite alternate;
+            text-transform: uppercase;
+        }
+
+        @keyframes glowText {
+            0% {
+                text-shadow: 
+                    0 0 10px var(--color-cuaternario),
+                    0 0 20px var(--color-cuaternario),
+                    0 0 30px var(--color-cuaternario);
+            }
+            100% {
+                text-shadow: 
+                    0 0 20px var(--color-cuaternario),
+                    0 0 30px var(--color-cuaternario),
+                    0 0 40px var(--color-cuaternario),
+                    0 0 50px var(--color-cuaternario);
+            }
+        }
+
+        .subtitle {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.5rem;
+            color: #ffffff;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-button {
+            font-family: 'Rajdhani', sans-serif;
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--color-cuaternario), var(--color-quinternario));
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            border-color: #ffffff;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1rem;
+                letter-spacing: 0.15em;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                letter-spacing: 0.03em;
+            }
+            
+            .main-content {
+                padding: 2rem 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Particles.js container -->
+    <div id="particles-js" aria-hidden="true"></div>
+    
+    <!-- Sol circular en el centro -->
+    <div class="sun" aria-hidden="true"></div>
+    
+    <!-- Edificios -->
+    <div class="buildings-container" aria-hidden="true">
+        <div class="buildings"></div>
+    </div>
+    
+    <!-- Montañas SVG -->
+    <div class="mountains-container" aria-hidden="true">
+        <div class="mountains-back"></div>
+        <div class="mountains-front"></div>
+    </div>
+
+    <!-- Elementos de Andorra -->
+    <div class="andorra-elements" aria-hidden="true">
+        <img src="iglesia.svg" alt="Iglesia de Andorra" class="church" />
+        <img src="caldea.svg" alt="Caldea Spa de Andorra" class="caldea-spa" />
+        <img src="andorra.svg" alt="Puente de Andorra" class="andorra-bridge" />
+    </div>
+
+    <!-- Roc del Quer SVG -->
+    <div class="rocdelquer-container" aria-hidden="true">
+        <img src="rocdelquer.svg" alt="Roc del Quer - Punto de observación en Andorra" />
+    </div>
+
+    <!-- Sección de contenido principal -->
+    <main class="main-content" role="main">
+        <header class="content-header" role="banner">
+            <h1 class="hero-title">Matias Hormaza</h1>
+            <h2 class="hero-title">Web Developer</h2>
+        </header>
+        <section class="hero-section">
+            <p class="subtitle">Creando experiencias digitales únicas con tecnología moderna</p>
+            <a href="https://wa.me/376367071" class="cta-button" rel="noopener noreferrer" target="_blank">¡Trabajemos juntos!</a>
+        </section>
+    </main>
+    
+    <script>
+        // Efecto Parallax optimizado
+        let ticking = false;
+        
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            
+            // Diferentes velocidades para crear profundidad
+            const sunRate = scrolled * -0.05;        // Sol muy lento (fondo)
+            const mountainsBackRate = scrolled * -0.1;   // Montañas fondo
+            const mountainsFrontRate = scrolled * -0.15; // Montañas frente
+            const buildingsRate = scrolled * -0.25;      // Edificios más rápido
+            const rocRate = scrolled * -0.2;             // Roc del Quer
+            const andorraRate = scrolled * -0.12;        // Elementos Andorra
+            
+            // Aplicar transformaciones
+            const sun = document.querySelector('.sun');
+            if (sun) {
+                sun.style.transform = `translate(-50%, calc(-50% + ${sunRate}px))`;
+            }
+            
+            const mountainsBack = document.querySelector('.mountains-back');
+            if (mountainsBack) {
+                mountainsBack.style.transform = `translateX(${mountainsBackRate}px)`;
+            }
+            
+            const mountainsFront = document.querySelector('.mountains-front');
+            if (mountainsFront) {
+                mountainsFront.style.transform = `translateX(${mountainsFrontRate}px)`;
+            }
+            
+            const buildings = document.querySelector('.buildings');
+            if (buildings) {
+                buildings.style.transform = `translateX(${buildingsRate}px)`;
+            }
+            
+            const rocDelQuer = document.querySelector('.rocdelquer-container');
+            if (rocDelQuer) {
+                rocDelQuer.style.transform = `translateY(${rocRate}px)`;
+            }
+            
+            const andorraElements = document.querySelector('.andorra-elements');
+            if (andorraElements) {
+                andorraElements.style.transform = `translateY(${andorraRate}px)`;
+            }
+            
+            // Elementos individuales con movimientos únicos
+            const bridge = document.querySelector('.andorra-bridge');
+            if (bridge) {
+                bridge.style.transform = `translateX(${scrolled * -0.08}px)`;
+            }
+            
+            const caldea = document.querySelector('.caldea-spa');
+            if (caldea) {
+                caldea.style.transform = `translateX(${scrolled * -0.06}px)`;
+            }
+            
+            const church = document.querySelector('.church');
+            if (church) {
+                church.style.transform = `translateX(${scrolled * -0.04}px)`;
+            }
+            
+            ticking = false;
+        }
+        
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', requestTick, { passive: true });
+
+        // Configuración de particles.js con tema NASA
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 160,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 1,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+</body>
+</html> 

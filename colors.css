@@ -1,0 +1,71 @@
+/* Variables de colores del sistema de diseño */
+
+:root {
+  /* Color primario - Russian Violet */
+  --color-primario: #300350;
+  
+  /* Color secundario - Mardi Gras */
+  --color-secundario: #94167F;
+  
+  /* Color terciario - Cerise Pink */
+  --color-terciario: #E93479;
+  
+  /* Color cuaternario - Rajah */
+  --color-cuaternario: #F9AC53;
+  
+  /* Color quinternario - Persian Rose */
+  --color-quinternario: #F62E97;
+  
+  /* Color sexternario - Persian Blue */
+  --color-sexternario: #153CB4;
+}
+
+/* Clases de utilidad para aplicar colores directamente */
+.color-primario {
+  color: var(--color-primario);
+}
+
+.color-secundario {
+  color: var(--color-secundario);
+}
+
+.color-terciario {
+  color: var(--color-terciario);
+}
+
+.color-cuaternario {
+  color: var(--color-cuaternario);
+}
+
+.color-quinternario {
+  color: var(--color-quinternario);
+}
+
+.color-sexternario {
+  color: var(--color-sexternario);
+}
+
+/* Clases de utilidad para fondos */
+.bg-primario {
+  background-color: var(--color-primario);
+}
+
+.bg-secundario {
+  background-color: var(--color-secundario);
+}
+
+.bg-terciario {
+  background-color: var(--color-terciario);
+}
+
+.bg-cuaternario {
+  background-color: var(--color-cuaternario);
+}
+
+.bg-quinternario {
+  background-color: var(--color-quinternario);
+}
+
+.bg-sexternario {
+  background-color: var(--color-sexternario);
+} 
